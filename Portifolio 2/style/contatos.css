@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif   ;
+}
+
+:root{
+    --fundo: #040404;
+    --fundo2: #232833;
+    --texto: #f5f7fc ;
+    --principal: #e2ff00;
+    --secundario: #e1e7ed;
+}
+
+body{
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--texto);
+    text-decoration: none
+}
+
+.logo {
+    font-size: 25px;
+    color: var(--texto);
+    text-decoration: none
+}
+
+.menu a{
+    font-size: 18px;
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--principal);
+}
+
+.contato {
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.contato-content {
+    background: transparent;
+    max-width: 600px;
+}
+
+.contato-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 20px 0 40px;
+    color: var(--principal);
+}
+
+.contato-content h3 {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 20px 0 40px;
+    color: var(--principal);
+}
+
+.contato-content h4 {
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--principal);
+}
+
+.contato-content h5{
+    font-size: 20;
+    font-weight: 700;
+    color: var(--principal);
+}
+
+.contato-content p {
+    font-size: 16px;
+    margin: 10px 0 40px;
+}
+
+.contato-content a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--texto);
+    margin: 20px 0 40px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contato-content a:hover,
+a.active {
+    color: var(--principal);
+}
+
+form{
+    max-width: 500px;
+    margin: 20px 0 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: var(--fundo2);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 8px;
+    color: var(--texto);
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+form input::placeholder {
+    color: var(--texto);
+}
+
+form textarea::placeholder{
+    color: var(--texto);
+}
+
+form textarea{
+    resize: none;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: var(--fundo);
+    color: var(--texto);
+    border: 2px solid var(--texto);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form .btn-enviar input::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--principal);
+    z-index: -1;
+    transition: .5s;
+}
+
+form .btn-enviar input:hover{
+    color: var(--fundo);
+    background-color: var(--principal);
+    transition: .5s;
+}
+
+
+
+.home-sci {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--secundario);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--secundario);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: var(--fundo);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--principal);
+    border-radius: 50%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
